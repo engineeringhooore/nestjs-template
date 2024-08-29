@@ -1,0 +1,11 @@
+services:
+  nest-app:
+    image: nest-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PORT: 3000
+    env_file:
+      - path: ./.env
+        required: true
