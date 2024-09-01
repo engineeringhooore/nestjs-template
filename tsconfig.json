@@ -17,11 +17,10 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    /* If transpiling with TypeScript: */
+    // Because NOT transpiling with TypeScript:
     "module": "preserve",
     "moduleResolution": "bundler",
-    "outDir": "dist",
-    "sourceMap": true,
+    "noEmit": true,
 
     // For the code doesn't runs in the DOM:
     "lib": ["es2022"],
