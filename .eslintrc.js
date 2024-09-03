@@ -11,15 +11,13 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
-  rules: {
-    "no-console": "error",
-  },
   root: true,
   env: {
     node: true,
   },
   ignorePatterns: [".eslintrc.js"],
   rules: {
+    "no-console": "error",
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
