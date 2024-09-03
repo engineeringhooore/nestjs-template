@@ -11,6 +11,9 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
+  rules: {
+    "no-console": "error",
+  },
   root: true,
   env: {
     node: true,
