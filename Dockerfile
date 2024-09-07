@@ -30,6 +30,7 @@ COPY --from=builder --chown=node:node /home/node/package*.json .
 COPY --from=builder --chown=node:node /home/node/node_modules ./node_modules
 COPY --from=builder --chown=node:node /home/node/dist ./dist
 
+ARG PORT=3000
 EXPOSE ${PORT}
 
 CMD ["node", "dist/main.js"]
