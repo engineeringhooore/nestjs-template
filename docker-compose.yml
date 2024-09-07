@@ -1,9 +1,11 @@
 services:
-  nest-app:
-    image: nest-app
+  nestjs-template:
+    image: nestjs-template
     build:
       context: .
       dockerfile: Dockerfile
     env_file:
       - path: ./.env
         required: true
+    ports:
+      - "${PORT}:${PORT}"

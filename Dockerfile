@@ -22,12 +22,14 @@ RUN \
 # Final run stage
 FROM node:22.7.0-alpine3.19
  
-ENV NODE_ENV production
+ENV NODE_ENV=production
 USER node
 WORKDIR /home/node
  
 COPY --from=builder --chown=node:node /home/node/package*.json .
 COPY --from=builder --chown=node:node /home/node/node_modules ./node_modules
 COPY --from=builder --chown=node:node /home/node/dist ./dist
- 
+
+EXPOSE ${PORT}
+
 CMD ["node", "dist/main.js"]
